@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 	<meta charset="UTF-8">
 	<title>Resume/CV Design</title>
@@ -7,17 +7,18 @@
 	<!--<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>-->
 </head>
 <body>
+<button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
 <div class="resume">
    <div class="resume_left">
      <div class="resume_profile">
-       <img src="https://lh3.googleusercontent.com/pw/AM-JKLWRVBtekHGThEQFA56McUME5Wm2SV3SH6gSkI7jZ0kzy5BVhT7y2z2AE57FcodSCxIO8OvVRq9TIubs1lCduaoTJNcL_7KcAWA25dNFnMPlUkG2x6BYeSDPgqAAuvARUFD6S53OgpiSxjF3cWSHAHyR=w800-h531-no?authuser=0" alt="profile_pic">
+       <!--img src="./images/profile.jpg" alt="profile_pic" -->
      </div>
      <div class="resume_content">
        <div class="resume_item resume_info">
          <div class="title">
            <p class="bold">Diego Barbieri</p>
-           <p class="regular">programmatore</p>
+           <p class="regular">computer scientist - hetical hacker</p>
          </div>
          <ul>
            <li>
@@ -25,15 +26,7 @@
               <img src="images/icons8-home-48.png"/>
              </div>
              <div class="data">
-               Via Pallotti 3 <br /> Bologna(BO)
-             </div>
-           </li>
-           <li>
-             <div class="icon">
-              <img src="images/icons8-contacts-48.png"/>
-             </div>
-             <div class="data">
-               +39 348 4520690
+               Bologna, Italy
              </div>
            </li>
            <li>
@@ -49,26 +42,38 @@
               <img src="images/icons8-github-50.png"/>
              </div>
              <div class="data">
-               github.com/Diebbo
+               <a href="https://github.com/Diebbo">Diebbo</a>
              </div>
            </li>
          </ul>
        </div>
        <div class="resume_item resume_skills">
          <div class="title">
-           <p class="bold">Linguaggi Conosciuti</p>
+           <p class="bold">Tech Stack</p>
          </div>
          <ul class="skills_list">
             <li >
               <div class="technology">
                 <div class="title">Web Dev</div>
-                <div class="languages">HTML, CSS, JS, Angular</div>
+                <div class="languages">HTML, CSS, JS, Angular, React, Next.js, Tailwind</div>
               </div>
             </li>
             <li >
               <div class="technology">
                 <div class="title">General Purpose</div>
                 <div class="languages">C, C++, Java, Python</div>
+              </div>
+            </li>
+            <li >
+              <div class="technology">
+                <div class="title">Tools</div>
+                <div class="languages">Git, GitHub, Docker, Linux, Vim</div>
+              </div>
+            </li>
+            <li >
+              <div class="technology">
+                <div class="title">Database</div>
+                <div class="languages">MySQL, MongoDB</div>
               </div>
             </li>
          </ul>
@@ -119,6 +124,15 @@
                      <p class="semi-bold">Tirocinio presso Cineca</p> 
                   <p>Attività introduttive per l'utilizzo del framework JS - Angular. Realizzazione di un API (basic) in Node.js-Express</p>
                 </div>
+            </li>
+            <li>
+              <div class="date">2024</div>
+              <div class="info">
+                <p class="semi-bold">Sviluppatore Full Stack presso Logica Srl</p>
+                <p>Sviluppo di software gestionale backend in C# e frontend in Angular</p>
+                <p>Studio soluzioni di logging e di gestione di errori tramite Loki, Grafana e Prometheus</p>
+                <p>Gestione di progetti con tirocinanti</p>
+              </div>
             </li>
         </ul>
     </div>
@@ -184,10 +198,51 @@
         <p class="bold">Competenze Linguestiche</p>
       </div>
       <p><b>Italiano:</b> Madrelingua</p>
-      <p><b>Inglese:</b> B2 advanced</p>
+      <p><b>Inglese:</b> C1 (IELTS 7.0)</p>
+    </div>
+    <div class="resume_item">
+      <div class="title">
+        <p class="bold">Progetti</p>
+      </div>
+      <ul>
+        <li>
+          <div class="date">2024</div>
+          <div class="info"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="resume_item">
+      <div class="title">
+        <p class="bold">Hobbies</p>
+      </div>
+      <ul>
+        <li>
+          <div class="date">CTFs</div>
+        </li>
+        <li>
+          <div class="date">Batteria</div>
+        </li>
+        <li>
+          <div class="date">Arrampicata</div>
+        </li>
+        <li>
+          <div class="date">Leggere</div>
+        </li>
+        <li>
+          <div class="date">Scacchi</div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', newTheme);
+}
+</script>
 </body>
 </html>
