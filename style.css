@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
-  --bg-color: #f0f0f0;
-  --text-color: #1a1a1a;
-  --accent-color: #00ff00;
-  --secondary-color: #1a1a1a;
-  --border-color: #00ff00;
-  --card-bg: #ffffff;
-  --transition-speed: 0.3s;
-  --icon-color: #1a1a1a;
-}
-
-[data-theme="dark"] {
   --bg-color: #1a1a1a;
   --text-color: #00ff00;
   --accent-color: #00ff00;
@@ -19,6 +8,7 @@
   --border-color: #00ff00;
   --card-bg: #2d2d2d;
   --icon-color: #00ff00;
+  --transition-speed: 0.3s;
 }
 
 * {
@@ -54,6 +44,7 @@ body {
 
 .resume_left:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 170, 0, 0.15);
 }
 
 .resume_right {
@@ -67,6 +58,7 @@ body {
 
 .resume_right:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 170, 0, 0.15);
 }
 
 .resume_profile img {
@@ -163,6 +155,11 @@ li {
   color: var(--text-color);
 }
 
+.technology:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 170, 0, 0.2);
+}
+
 .date {
   min-width: 120px;
   color: var(--accent-color);
@@ -196,24 +193,7 @@ a:hover {
 .follow-link:hover::after {
   transform: translateX(5px); /* Only the arrow moves */
 }
-/* Theme Toggle Button */
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: var(--card-bg);
-  border: 2px solid var(--border-color);
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-family: 'JetBrains Mono', monospace;
-  transition: all var(--transition-speed);
-}
 
-.theme-toggle:hover {
-  background: var(--accent-color);
-  color: var(--bg-color);
-}
 
 /* Animations */
 @keyframes fadeIn {
@@ -284,7 +264,7 @@ a:hover {
 
 .hobby-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 170, 0, 0.1);
 }
 
 .hobby-item .icon {
@@ -350,7 +330,7 @@ details {
 }
 
 details:hover {
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 170, 0, 0.2);
 }
 
 details[open] {
@@ -366,7 +346,7 @@ summary {
 }
 
 summary:hover {
-  background: rgba(0, 255, 0, 0.05);
+  background: rgba(0, 170, 0, 0.05);
 }
 
 details > summary::-webkit-details-marker { /* to remove triangle */
@@ -402,7 +382,7 @@ details > ul {
 /* Project Cards */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -417,7 +397,7 @@ details > ul {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0, 255, 0, 0.15);
+  box-shadow: 0 5px 20px rgba(0, 170, 0, 0.15);
 }
 
 .project-header {
@@ -487,7 +467,7 @@ details > ul {
 
 .nav-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0, 255, 0, 0.15);
+  box-shadow: 0 5px 20px rgba(0, 170, 0, 0.15);
   border-color: var(--accent-color);
 }
 
@@ -538,7 +518,7 @@ details > ul {
 
 .language-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 20px rgba(0, 255, 0, 0.15);
+  box-shadow: 0 5px 20px rgba(0, 170, 0, 0.15);
 }
 
 .language-icon {
@@ -594,7 +574,7 @@ details > ul {
 
 .hobby-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 20px rgba(0, 255, 0, 0.15);
+  box-shadow: 0 5px 20px rgba(0, 170, 0, 0.15);
 }
 
 .hobby-icon {
