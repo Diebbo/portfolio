@@ -185,7 +185,7 @@ a:hover {
   opacity: 0.8;
 }
 
-a::after {
+.follow-link::after {
   content: "↗"; /* a cleaner arrow-like character */
   display: inline-block; /* needed for transform */
   font-size: 1em;
@@ -193,7 +193,7 @@ a::after {
   transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-a:hover::after {
+.follow-link:hover::after {
   transform: translateX(5px); /* Only the arrow moves */
 }
 /* Theme Toggle Button */
@@ -402,7 +402,7 @@ details > ul {
 /* Project Cards */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
