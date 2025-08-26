@@ -7,268 +7,46 @@
     <link rel="shortcut icon" type="image/png" href="./briefcase.png" />
     <!-- link rel="icon" type="image/png" href="./favicon.png" -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   </head>
   <body>
     <div class="resume">
-      <div class="resume_left">
-        <div class="resume_profile">
-          <!--img src="./images/profile.jpg" alt="profile_pic" -->
-        </div>
-        <div class="resume_content">
-          <div class="resume_item resume_info">
-            <div class="title">
-              <p class="bold">Diego Barbieri</p>
-              <p class="regular">Computer Scientist - Ethical Hacker</p>
-            </div>
-            <ul>
-              <li>
-                <div class="icon">
-                  <i class="ph ph-house"></i>
-                </div>
-                <div class="data">Bologna, Italy > Aarhus, Denmark</div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="ph ph-at"></i>
-                </div>
-                <div class="data">
-                  <a
-                    class="follow-link"
-                    href="mailto:diego.barbieri03@libero.it?subject=Contact%20email"
-                    >diego.barbieri03@libero.it</a
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="ph ph-github-logo"></i>
-                </div>
-                <div class="data">
-                  <a href="https://github.com/Diebbo" class="follow-link"
-                    >Diebbo</a
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="resume_item resume_skills">
-            <div class="title">
-              <p class="bold">Tech Stack</p>
-            </div>
-            <ul class="skills_list">
-              <li>
-                <div class="technology">
-                  <div class="title">Web Dev</div>
-                  <div class="languages">
-                    HTML, CSS, JS, Angular, React, Next.js, Tailwind
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="technology">
-                  <div class="title">General Purpose</div>
-                  <div class="languages">C, C++, Java, Python</div>
-                </div>
-              </li>
-              <li>
-                <div class="technology">
-                  <div class="title">Tools</div>
-                  <div class="languages">Git, GitHub, Docker, Linux, Vim</div>
-                </div>
-              </li>
-              <li>
-                <div class="technology">
-                  <div class="title">Database</div>
-                  <div class="languages">MySQL, MongoDB</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="resume_item resume_social">
-            <div class="title">
-              <p class="bold">Social</p>
-            </div>
-            <ul>
-              <li>
-                <div class="icon">
-                  <img
-                    src="https://img.icons8.com/material-outlined/24/000000/instagram-new--v1.png"
-                  />
-                </div>
-                <div class="data">
-                  <p class="semi-bold">Instagram</p>
-                  <p>@Dieg.eg0</p>
-                </div>
-              </li>
-              <li>
-                <div class="icon">
-                  <img
-                    src="https://img.icons8.com/material-outlined/24/000000/linkedin.png"
-                  />
-                </div>
-                <div class="data">
-                  <p class="semi-bold">LinkedIn</p>
-                  <p>Diego Barbieri</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div hx-get="partials/sidebar.html" hx-trigger="load" hx-swap="outerHTML"></div>
       <div class="resume_right">
-        <div class="resume_item">
-          <div class="title">
-            <p class="bold">Featured Projects</p>
-          </div>
-          <div class="projects-grid">
-            <div class="project-card">
-              <div class="project-header">
-                <h3>Image Segmentation Model</h3>
-                <span class="project-date">Jan 2025 - Feb 2025</span>
-              </div>
-              <p>
-                Development of a UNet model for image segmentation (course:
-                "Introduction to Machine Learning", UNIBO)
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Diebbo/progetto-ai"
-                  class="project-link follow-link"
-                  >View on GitHub</a
-                >
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-header">
-                <h3>Airport Database</h3>
-                <span class="project-date">Dec 2024 - Jan 2025</span>
-              </div>
-              <p>
-                University project involving the creation of an airport
-                database. The project includes requirements analysis, design,
-                database construction, and process documentation (course:
-                "Database Systems", UNIBO)
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Diebbo/aereodb"
-                  class="project-link follow-link"
-                  >View on GitHub</a
-                >
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-header">
-                <h3>Vezgammon</h3>
-                <span class="project-date">Oct 2024 - Jan 2025</span>
-              </div>
-              <p>
-                University project focused on understanding AGILE and TDD
-                methodologies. The work involves developing a web-based
-                backgammon game following user stories, sprints, and test-driven
-                programming (course: "Software Engineering", UNIBO)
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Diebbo/vezgammon"
-                  class="project-link"
-                  >View on GitHub</a
-                >
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-header">
-                <h3>Selfie</h3>
-                <span class="project-date">Jul 2024 - Dec 2024</span>
-              </div>
-              <p>
-                Web application based on MERN stack. The website is designed to
-                facilitate university student life with various features
-                including: Calendar with events and activities, note management,
-                friends, chat, and projects (Gantt charts) (course: "Web
-                Technologies", UNIBO)
-              </p>
-              <div class="project-links">
-                <a href="https://github.com/Diebbo/selfie" class="project-link"
-                  >View on GitHub</a
-                >
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-header">
-                <h3>Micro Kernel</h3>
-                <span class="project-date">Oct 2023 - Sep 2024</span>
-              </div>
-              <p>
-                Study and programming of a micro kernel for educational purposes
-                based on RISC-V micro architecture (course: "Operating Systems",
-                UNIBO)
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Diebbo/so-mriscv"
-                  class="project-link"
-                  >View on GitHub</a
-                >
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-header">
-                <h3>ConnectX</h3>
-                <span class="project-date">Jan 2023 - Sep 2023</span>
-              </div>
-              <p>
-                Programming of a bot capable of playing and winning Connect 4+
-                games. The project specifications required developing a CPU able
-                to analyze possible game scenarios through various methodologies
-                and algorithms covered in class (minimax, pruning, iterative
-                deepening, etc.) to find the winning move in a variant of the
-                famous Connect 4 board game with variable table dimensions
-                (course: "Algorithms and Data Structures", UNIBO)
-              </p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Diebbo/ConnectX-Level-8"
-                  class="project-link"
-                  >View on GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="resume_item">
           <div class="title">
             <p class="bold">Navigation</p>
           </div>
           <div class="navigation-grid">
-            <a href="work-experience.html" class="nav-card">
+            <a href="#" class="nav-card" hx-get="partials/work.html" hx-target="#content" hx-swap="innerHTML">
+              <div class="nav-icon">
+                <i class="ph ph-code"></i>
+              </div>
+              <h3>Projects</h3>
+            </a>
+
+            <a href="#" class="nav-card" hx-get="partials/work.html" hx-target="#content" hx-swap="innerHTML">
               <div class="nav-icon">
                 <i class="ph ph-briefcase"></i>
               </div>
               <h3>Work Experience</h3>
             </a>
 
-            <a href="education.html" class="nav-card">
+            <a href="#" class="nav-card" hx-get="partials/education.html" hx-target="#content" hx-swap="innerHTML">
               <div class="nav-icon">
                 <i class="ph ph-graduation-cap"></i>
               </div>
               <h3>Education</h3>
             </a>
 
-            <a href="languages.html" class="nav-card">
+            <a href="#" class="nav-card" hx-get="partials/languages.html" hx-target="#content" hx-swap="innerHTML">
               <div class="nav-icon">
                 <i class="ph ph-translate"></i>
               </div>
               <h3>Languages</h3>
             </a>
 
-            <a href="hobbies.html" class="nav-card">
+            <a href="#" class="nav-card" hx-get="partials/hobbies.html" hx-target="#content" hx-swap="innerHTML">
               <div class="nav-icon">
                 <i class="ph ph-heart"></i>
               </div>
@@ -276,6 +54,8 @@
             </a>
           </div>
         </div>
+
+        <div id="content" hx-get="partials/projects.html" hx-trigger="load" hx-swap="innerHTML"></div>
       </div>
     </div>
   </body>

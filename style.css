@@ -110,30 +110,12 @@ li {
   text-overflow: nowrap;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon img {
-  width: 24px;
-  height: 24px;
-  filter: none;
+.icon i{
+  font-size: 1.5rem;
   transition: transform var(--transition-speed);
 }
 
-[data-theme="dark"] .icon img {
-  filter: invert(1) hue-rotate(90deg);
-}
-
-[data-theme="light"] .icon img {
-  filter: brightness(0);
-}
-
-.icon img:hover {
+.icon i:hover {
   transform: scale(1.2);
 }
 
