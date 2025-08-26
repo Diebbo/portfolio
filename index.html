@@ -18,7 +18,7 @@
             <p class="bold">Navigation</p>
           </div>
           <div class="navigation-grid">
-            <a href="#" class="nav-card" hx-get="partials/work.html" hx-target="#content" hx-swap="innerHTML">
+            <a href="#" class="nav-card active" hx-get="partials/projects.html" hx-target="#content" hx-swap="innerHTML">
               <div class="nav-icon">
                 <i class="ph ph-code"></i>
               </div>
@@ -58,5 +58,23 @@
         <div id="content" hx-get="partials/projects.html" hx-trigger="load" hx-swap="innerHTML"></div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navCards = document.querySelectorAll(".nav-card");
+    
+        navCards.forEach(card => {
+          card.addEventListener("click", function(e) {
+            // prevent navigation default
+            e.preventDefault();
+    
+            // remove active from all
+            navCards.forEach(c => c.classList.remove("active"));
+    
+            // add active to clicked one
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>
