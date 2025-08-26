@@ -104,8 +104,10 @@ li {
 }
 
 .data {
-  width: 200px;
+  width: 80%;
   color: var(--text-color);
+  overflow-x: auto;
+  text-overflow: nowrap;
 }
 
 .icon {
