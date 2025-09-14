@@ -430,9 +430,10 @@ details > ul {
 }
 
 /* Navigation Grid */
+/* one raw with multiple columns */
 .navigation-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -441,8 +442,9 @@ details > ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
